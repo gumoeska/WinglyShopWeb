@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Login } from '../../models/auth/login';
 import { Register } from '../../models/auth/register';
 import { JwtAuth } from '../../models/auth/jwtAuth';
-import { AuthenticationService } from '../../core/services/authentication.service';
+import { AuthenticationService } from '../../core/services/authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -24,12 +24,6 @@ export class LoginComponent {
   login(loginDto: Login){
     this.authService.login(loginDto).subscribe((jwtDto) => {
       localStorage.setItem('jwtToken', jwtDto.value);
-    });
-  }
-
-  getAllUsers() {
-    this.authService.getUsers().subscribe((userData: any) => {
-      console.log(userData);
     });
   }
 }

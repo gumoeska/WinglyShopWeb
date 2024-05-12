@@ -1,4 +1,40 @@
 <p>home works!</p>
 
+<hr/>
+
+<ul>
+    <li *ngFor="let item of testList">
+        {{item.Name}}
+    </li>
+</ul>
+
+<hr/>
+
+<label>
+    {{getItemFromList(2)}}
+</label>
+
+<hr/>
+
+<h1>Get all users</h1>
+<button (click)="getAllUsers()">Get all</button>
+
+<ul>
+    <li *ngFor="let item of usernames">
+        {{item}}
+    </li>
+</ul>
+
+
+<h1>Get all Admin Accounts</h1>
+
+<ul>
+    <li *ngFor="let item of adminUsername">
+        {{item}}
+    </li>
+</ul>
+<button (click)="getTheAdminInformation()">Get all</button>
+
+<hr/>
 
 <button routerLink="/login">Login</button>
