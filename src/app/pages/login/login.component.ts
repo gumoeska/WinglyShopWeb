@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Login } from './models/auth/login';
-import { Register } from './models/auth/register';
-import { JwtAuth } from './models/auth/jwtAuth';
-import { AuthenticationService } from './core/services/authentication.service';
+import { Login } from '../../models/auth/login';
+import { Register } from '../../models/auth/register';
+import { JwtAuth } from '../../models/auth/jwtAuth';
+import { AuthenticationService } from '../../core/services/authentication.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
 })
-export class AppComponent {
+export class LoginComponent {
   title = 'WinglyShop';
   loginDto = new Login();
   registerDto = new Register();

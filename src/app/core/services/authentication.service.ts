@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Login } from '../models/auth/login';
-import { Register } from '../models/auth/register';
-import { JwtAuth } from '../models/auth/jwtAuth';
+import { Login } from '../../models/auth/login';
+import { Register } from '../../models/auth/register';
+import { JwtAuth } from '../../models/auth/jwtAuth';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

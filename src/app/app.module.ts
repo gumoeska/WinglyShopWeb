@@ -5,11 +5,21 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { AuthenticationInterceptor } from './services/Interceptor';
+import { AuthenticationInterceptor } from './core/interceptors/Interceptor';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './shared/layouts/header/header.component';
+import { DefaultComponent } from './shared/layouts/default/default.component';
+import { MasterComponent } from './shared/layouts/master/master.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    HeaderComponent,
+    DefaultComponent,
+    MasterComponent
   ],
   imports: [
     BrowserModule,

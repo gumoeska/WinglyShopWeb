@@ -1,0 +1,25 @@
+<main class="main">
+    <div class="content">
+        <div>
+            <h1>{{ title }}</h1>
+            <hr/>
+            <h1>Register</h1>
+            <div><p>Login: </p><input [(ngModel)]="registerDto.login"/></div>
+            <div><p>Password: </p><input [(ngModel)]="registerDto.password"/></div>
+            <div><p>Email: </p><input [(ngModel)]="registerDto.email"/></div>
+            <div><p>Name: </p><input [(ngModel)]="registerDto.name"/></div>
+            <div><p>Surname: </p><input [(ngModel)]="registerDto.surname"/></div>
+            <div><p>Image: </p><input [(ngModel)]="registerDto.image"/></div>
+            <div><p>Phone: </p><input [(ngModel)]="registerDto.phone"/></div>
+            <button (click)="register(registerDto)">Register</button>
+            <br/><br/>
+            <h1>Login</h1>
+            <div><p>Login: </p><input [(ngModel)]="loginDto.login"/></div>
+            <div><p>Password: </p><input [(ngModel)]="loginDto.password"/></div>
+            <button (click)="login(loginDto)">Login</button>
+            <br/><br/>
+            <h1>Get all users</h1>
+            <button (click)="getAllUsers()">Get all</button>
+        </div>
+    </div>
+</main>
