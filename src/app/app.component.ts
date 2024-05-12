@@ -23,7 +23,13 @@ export class AppComponent {
 
   login(loginDto: Login){
     this.authService.login(loginDto).subscribe((jwtDto) => {
-      localStorage.setItem('jwtToken', jwtDto.token);
+      localStorage.setItem('jwtToken', jwtDto.value);
+    });
+  }
+
+  getAllUsers() {
+    this.authService.getUsers().subscribe((userData: any) => {
+      console.log(userData);
     });
   }
 }

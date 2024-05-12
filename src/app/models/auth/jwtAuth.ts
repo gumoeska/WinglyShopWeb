@@ -1,5 +1,5 @@
 export class JwtAuth {
-    token: string = '';
+    value: string = '';
     result: boolean = true;
     error: any;
 }

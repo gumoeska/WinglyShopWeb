@@ -12,7 +12,7 @@ import { environment } from '../../environments/environment';
 export class AuthenticationService {
   registerUrl: string = "Auth/Register";
   loginUrl: string = "Auth/Login";
-
+  getAllUsersUrl: string = "Users";
 
   constructor(private http: HttpClient) { }
 
@@ -22,5 +22,9 @@ export class AuthenticationService {
 
   public login(user: Login): Observable<JwtAuth> {
     return this.http.post<JwtAuth>(`${ environment.apiUrl }/${ this.loginUrl }`, user);
+  }
+
+  public getUsers(): Observable<any> {
+    return this.http.get<any>(`${ environment.apiUrl }/${ this.getAllUsersUrl }`);
   }
 }
