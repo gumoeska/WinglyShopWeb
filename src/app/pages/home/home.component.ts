@@ -36,10 +36,6 @@ export class HomeComponent {
   }
 
   getItemFromList(selectedItem: number): string | undefined{
-    let selectedItemFromList = this.testList
-      .filter(x => x.Id === selectedItem)
-      .map(x => x.Name);
-
     let selectedItemFromList2 = this.testList.find(x => x.Id === selectedItem)?.Name;
 
     return selectedItemFromList2;
