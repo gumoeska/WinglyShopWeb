@@ -1,0 +1,33 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title w-100 text-center mt-3 mb-0">Registrar</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="bsModalRef.hide()"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="register(registerDto)">
+              <div class="mb-3">
+                <label for="login" class="form-label">Usuário:</label>
+                <input type="text" class="form-control" id="login" required [(ngModel)]="registerDto.login" name="login">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Senha:</label>
+                <input type="password" class="form-control" id="password" required [(ngModel)]="registerDto.password" name="password">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" class="form-control" id="email" required [(ngModel)]="registerDto.email" name="email">
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

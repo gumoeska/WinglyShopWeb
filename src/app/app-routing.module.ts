@@ -11,10 +11,16 @@ const routes: Routes = [
     component: DefaultComponent,
     children: [{ path: '', component: HomeComponent }]
   },
+  // {
+  //   path: '',
+  //   component: MasterComponent,
+  //   children: [{ path: 'login', component: LoginComponent }]
+  // },
+
+  // route not found - 404
   {
-    path: '',
-    component: MasterComponent,
-    children: [{ path: 'login', component: LoginComponent }]
+    path: '**',
+    redirectTo: ''
   }
 ];
 

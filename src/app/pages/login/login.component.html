@@ -1,22 +1,31 @@
-<main class="main">
-    <div class="content">
-        <div>
-            <h1>{{ title }}</h1>
-            <hr/>
-            <h1>Register</h1>
-            <div><p>Login: </p><input [(ngModel)]="registerDto.login"/></div>
-            <div><p>Password: </p><input [(ngModel)]="registerDto.password"/></div>
-            <div><p>Email: </p><input [(ngModel)]="registerDto.email"/></div>
-            <div><p>Name: </p><input [(ngModel)]="registerDto.name"/></div>
-            <div><p>Surname: </p><input [(ngModel)]="registerDto.surname"/></div>
-            <div><p>Image: </p><input [(ngModel)]="registerDto.image"/></div>
-            <div><p>Phone: </p><input [(ngModel)]="registerDto.phone"/></div>
-            <button (click)="register(registerDto)">Register</button>
-            <br/><br/>
-            <h1>Login</h1>
-            <div><p>Login: </p><input [(ngModel)]="loginDto.login"/></div>
-            <div><p>Password: </p><input [(ngModel)]="loginDto.password"/></div>
-            <button (click)="login(loginDto)">Login</button>
-        </div>
+<div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title w-100 text-center mt-3 mb-0">Entrar</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="bsModalRef.hide()"></button>
     </div>
-</main>
+    <div class="modal-body">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <form (ngSubmit)="login(loginDto)">
+                <div class="mb-3">
+                  <label for="login" class="form-label">Usuário:</label>
+                  <input type="text" class="form-control" id="login" required [(ngModel)]="loginDto.login" name="login">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Senha:</label>
+                  <input type="password" class="form-control" id="password" required [(ngModel)]="loginDto.password" name="password">
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary">Entrar</button>
+                  <a href="#" class="btn btn-link" (click)="forgotPassword()">Esqueceu a senha?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

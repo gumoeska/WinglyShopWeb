@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="header-area">
+            <header class="container d-flex justify-content-between align-items-center p-2">
+                <div class="logo">
+                  <a href="./">
+                      <img class="m-2 p-0" src="../../assets/img/WinglyShop.png" height="50px" width="50px"/>
+                      <h3 class="p-0 m-0" style="color: #8b7ceb; font-weight: bold; font-size: 12px;">Wingly Shop</h3>
+                  </a>
+                </div>
+              <nav class="nav d-flex align-items-center">
+                <a class="nav-link" [routerLink]="">
+                    <i class="bi bi-heart-fill"></i> Favoritos
+                </a>
+                <a class="nav-link" [routerLink]="">
+                    <div class="shopping-item">
+                        <i class="bi bi-cart-fill"></i>
+                        <a routerLink="/cart"> Carrinho
+                        <span class="product-count">2</span></a>
+                    </div>
+                </a>
+                <a class="nav-link" [routerLink]="" (click)="openLoginDialog()">
+                    <i class="bi bi-person-fill"></i> Entrar
+                </a>
+                <a class="nav-link" [routerLink]="" (click)="openRegisterDialog()">
+                    <i class="bi bi-person-fill-add"></i> Registrar
+                </a>
+              </nav>
+            </header>
+          </div>
+          <div class="mainmenu-area">
+            <div class="container">
+              <div class="row">
+                <div class="navbar">
+                  <ul class="nav navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" routerLink="">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/products">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/categories">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/sales">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/cart">Carrinho</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/checkout">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/contact">Contato</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
