@@ -11,19 +11,4 @@ import { AuthenticationService } from './core/services/authentication/authentica
 })
 export class AppComponent {
   title = 'WinglyShop';
-  loginDto = new Login();
-  registerDto = new Register();
-  jwtDto = new JwtAuth();
-
-  constructor(private authService: AuthenticationService){ }
-
-  register(registerDto: Register){
-    this.authService.register(registerDto).subscribe();
-  }
-
-  login(loginDto: Login){
-    this.authService.login(loginDto).subscribe((jwtDto) => {
-      localStorage.setItem('jwtToken', jwtDto.value);
-    });
-  }
 }

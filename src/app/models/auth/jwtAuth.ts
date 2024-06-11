@@ -1,5 +1,7 @@
 export class JwtAuth {
-    value: string = '';
-    result: boolean = true;
-    error: any;
+    authData: string = '';
+    id: number = 0;
+    username: string = '';
+    code: string = '';
+    message: string = '';
 }

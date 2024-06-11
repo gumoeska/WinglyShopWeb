@@ -21,9 +21,16 @@ export class LoginComponent {
       private authService: AuthenticationService
     ){ }
 
-  login(loginDto: Login){
-    this.authService.login(loginDto).subscribe((jwtDto) => {
-      localStorage.setItem('jwtToken', jwtDto.value);
+  login(loginDto: Login) {
+    this.authService.login(loginDto).subscribe({
+      next: (jwtDto) => {
+        localStorage.setItem('jwtToken', jwtDto.authData);
+
+        alert(`Seja bem-vindo ${jwtDto.username}`); // TODO: Remover teste
+      },
+      error: (error) => {
+        alert(error.message); // TODO: Remover teste
+      }
     });
   }
 
