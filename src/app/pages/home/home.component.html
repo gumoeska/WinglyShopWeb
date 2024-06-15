@@ -5,27 +5,7 @@
           <div class="container">
             <div class="row">
               <!-- Slider carousel-item-->
-              <ngx-slick-carousel
-                class="carousel"
-                #slickModal="slick-carousel"
-                [config]="slideConfig">
-                @for (slide of slides; track slide.img) {
-                  <div ngxSlickItem class="slide">
-                      <img [src]="slide.img" alt="Slide" class="img-fluid" />
-                      <div class="caption-group1">
-                        <h2 class="caption title">
-                          {{ slide.title }}
-                          <span class="primary"> {{ slide.greentext }}</span>
-                        </h2>
-                        <h4 class="caption subtitle">{{ slide.subtitle }}</h4>
-                        <a class="caption button-radius" routerLink="/products">
-                          <i class="bi bi-bag-check-fill"></i>
-                          Acessar
-                        </a>
-                      </div>
-                  </div>
-                }
-              </ngx-slick-carousel>
+              <app-promotion-slider />
             </div>
           </div>
         </div>
@@ -37,88 +17,19 @@
             <div class="col-md-12">
               <div class="latest-product">
                 <h2 class="section-title">Promoções</h2>
-                <ngx-slick-carousel
-                  class="carousel"
-                  #slickModal="slick-carousel"
-                  [config]="slideConfigLogos">
-                  @for (slide of slidesLogos; track slide.img) {
-                    <div class="product-f-image">
-                      <div ngxSlickItem class="slide">
-                        <div class="product-sale-card-spacement">
-                          <div class="product-sale-card">
-                            <img [src]="slide.img" alt="Slide" class="img-fluid" style="height: 120px; width: 120px;"/>
-                            <div class="product-wid-price">
-                              <div class="caption-product-add-to-cart">
-                                <p>{{slide.description}}</p>
-                              </div>
-                              <a> de </a>
-                              <del>{{slide.lastValue}}</del>
-                              <a> por </a>
-                              <ins>{{slide.newValue}}</ins> 
-                            </div>
-                            <div class="button-add-to-cart">
-                              <button class="btn btn-primary">Adicionar ao carrinho</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  }
-                </ngx-slick-carousel>
+                <!-- Top Products -->
+                 <app-top-products />
               </div>
             </div>
           </div>
         </div>
       </div>
-  
       <div class="product-widget-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <div class="single-product-widget">
-                <h2 class="product-wid-title">Mais Vendidos</h2>
-                <a routerLink="" class="wid-view-more">Mais</a>
-                <div class="single-wid-product">
-                  <a routerLink="/product"
-                    ><img
-                      src="../../assets/img/produtoExemplo.jpg"
-                      alt=""
-                      class="product-thumb"
-                  /></a>
-                  <h2><a routerLink="/product">Produto 01 blablabla</a></h2>
-                  <div class="product-wid-price">
-                    de
-                    <ins>$400.00</ins> 
-                    por
-                    <del>$425.00</del>
-                  </div>
-                </div>
-                <div class="single-wid-product">
-                  <a routerLink="/product"
-                    ><img
-                      src="../../assets/img/produtoExemplo.jpg"
-                      alt=""
-                      class="product-thumb"
-                  /></a>
-                  <h2><a routerLink="/product">Produto 02 blablabla</a></h2>
-                  <div class="product-wid-price">
-                    <ins>$400.00</ins> <del>$425.00</del>
-                  </div>
-                </div>
-                <div class="single-wid-product">
-                  <a routerLink="/product"
-                    ><img
-                      src="../../assets/img/produtoExemplo.jpg"
-                      alt=""
-                      class="product-thumb"
-                  /></a>
-                  <h2><a routerLink="/product">Produto 03 blablabla</a></h2>
-                  <div class="product-wid-price">
-                    <ins>$400.00</ins> <del>$425.00</del>
-                  </div>
-                </div>
-              </div>
+              <app-bestsellers /> <!-- Best Sellers Section -->
             </div>
             <div class="col-md-4">
               <div class="single-product-widget">

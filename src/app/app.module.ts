@@ -20,6 +20,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { PromotionSliderComponent } from './shared/promotion-slider/promotion-slider.component';
+import { TopProductsComponent } from './shared/top-products/top-products.component';
+import { LatestProductsComponent } from './shared/latest-products/latest-products.component';
+import { BestsellersComponent } from './shared/bestsellers/bestsellers.component';
+import { MostWantedComponent } from './shared/most-wanted/most-wanted.component';
+import { NewArrivalsComponent } from './shared/new-arrivals/new-arrivals.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     DefaultComponent,
     MasterComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    PromotionSliderComponent,
+    TopProductsComponent,
+    LatestProductsComponent,
+    BestsellersComponent,
+    MostWantedComponent,
+    NewArrivalsComponent
   ],
   imports: [
     BrowserModule,

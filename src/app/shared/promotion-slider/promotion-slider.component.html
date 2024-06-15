@@ -1,0 +1,18 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    @for (slide of slides; track slide.img) {
+    <div ngxSlickItem class="slide">
+        <img [src]="slide.img" alt="Slide" class="img-fluid" />
+        <div class="caption-group1">
+            <h2 class="caption title">
+                {{ slide.title }}
+                <span class="primary"> {{ slide.greentext }}</span>
+            </h2>
+            <h4 class="caption subtitle">{{ slide.subtitle }}</h4>
+            <a class="caption button-radius" routerLink="/products">
+                <i class="bi bi-bag-check-fill"></i>
+                Acessar
+            </a>
+        </div>
+    </div>
+    }
+</ngx-slick-carousel>

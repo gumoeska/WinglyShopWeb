@@ -1,0 +1,25 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigLogos">
+    @for (slide of slidesLogos; track slide.img) {
+    <div class="product-f-image">
+        <div ngxSlickItem class="slide">
+            <div class="product-sale-card-spacement">
+                <div class="product-sale-card">
+                    <img [src]="slide.img" alt="Slide" class="img-fluid" style="height: 120px; width: 120px;" />
+                    <div class="product-wid-price">
+                        <div class="caption-product-add-to-cart">
+                            <p>{{slide.description}}</p>
+                        </div>
+                        <a> de </a>
+                        <del>{{slide.lastValue}}</del>
+                        <a> por </a>
+                        <ins>{{slide.newValue}}</ins>
+                    </div>
+                    <div class="button-add-to-cart">
+                        <button class="btn btn-primary">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</ngx-slick-carousel>

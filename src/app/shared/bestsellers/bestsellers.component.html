@@ -1,0 +1,25 @@
+<div class="single-product-widget">
+    <h2 class="product-wid-title">Mais Vendidos</h2>
+    <a routerLink="" class="wid-view-more">Mais</a>
+
+    @for (product of listOfProducts; track product){
+    <div class="single-wid-product">
+        <a routerLink="/product">
+            <img src="../../assets/img/produtoExemplo.jpg" alt="" class="product-thumb" />
+        </a>
+        <h2 routerLink="/product">
+            <a>
+                {{ product.description }}
+            </a>
+            <br/>
+            <a>
+                {{ product.categoryDescription }}
+            </a>
+        </h2>
+        <div class="product-wid-price">
+            <ins>${{ product.price }}</ins>
+            <!-- <del>$425.00</del>    De --- Por ---  -->
+        </div>
+    </div>
+    }
+</div>
